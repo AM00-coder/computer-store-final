@@ -1,0 +1,32 @@
+
+<div class="home-container">
+  <br>
+  <h1>Welcome To The Best HardWare And SoftWare Shop</h1>
+
+  <div class="products-list">
+    <div *ngFor="let product of products" class="member">
+      <img [src]="product.image" alt="{{ product.name }}" class="member-img">
+      <h2 class="member-name">{{ product.name }}</h2>
+      <p class="member-id">prices: {{ product.price }}$</p>
+      <button>Buy Now</button>
+      <br>
+      <a [routerLink]="['/product-details', product._id]" class="product-details-link">View Details</a>
+    </div>
+  </div>
+
+  <p style="color: brown;">Contact Us</p>
+  <div class="social-links">
+    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/haithamdaher1/" target="_blank" rel="noopener noreferrer" class="social-icon instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon linkedin">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+</div>

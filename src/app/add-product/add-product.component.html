@@ -1,0 +1,43 @@
+<body>
+<br>
+<h1>Add product</h1>
+<form [formGroup]="addProductForm" (ngSubmit)="add()">
+    <div>
+        <label for="name" class="form-label">Product name</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+
+    </div>
+    <div>
+        <label for="price" class="form-label">Product price</label>
+        <input type="number" class="form-control" id="price" formControlName="price">
+    </div>
+    <div>
+        <label for="image" class="form-label">Product image</label>
+        <input type="file" class="form-control" id="image" (change)="onfileSelceted($event)"    accept=".jpg" formControlName="image">
+    </div>
+    <div>
+        <label for="description" class="form-label">Product description</label>
+        <input type="text" class="form-control" id="description" formControlName="description">
+    </div>
+    <div>
+        <label for="category" class="form-label">Product Category</label>
+        <select class="form-control" id="category" formControlName="category" required formControlName="category">
+          <option value="" disabled selected>Select a category</option>
+          <option value="Graphic Card">Graphic Card</option>
+          <option value="Motherboards">Motherboards</option>
+          <option value="Monitors">Monitors</option>
+          <option value="CPU">CPU</option>
+          <option value="RAM">RAM</option>
+          <option value="ROM">ROM</option>
+        </select>
+      </div>
+    <div>
+        <label for="isPopular" class="form-label">Product is Popular</label>
+        <input  type="radio" class="form-check-input"  id="isPopularYes" formControlName="isPopular"  name="isPopular"  value="true"  /> Yes
+        <input type="radio" class="form-check-input" id="isPopularNo" name="isPopular" formControlName="isPopular" value="false" /> No
+      </div>
+      <button type ="submit" class="btn btn-primary">Add</button>
+
+</form>
+<br>
+</body>

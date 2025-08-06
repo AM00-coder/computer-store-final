@@ -1,0 +1,88 @@
+/* General Reset */
+/* Footer Styles */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: transparent; /* Gradient red for elegance */
+  color: #000000;
+  text-align: center;
+  font-size: 0.9rem;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Prominent shadow for depth */
+
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #000000; /* Warm gold color for links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #ff9f8cee; /* Glow effect on hover */
+}
+/* Main Content Wrapper */
+.page-container {
+  flex: 1; /* Ensures the main content grows to push footer down */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the content vertically */
+  align-items: center; /* Centers the content horizontally */
+  text-align: center;
+  padding: 20px 10px;
+  background: linear-gradient(120deg, #f7f7f7, #f1f1f1); /* Subtle gradient background */
+}
+
+/* About Section */
+.about {
+  max-width: 600px; /* Restrict the width for a more compact design */
+  padding: auto; /* Reduce padding for a smaller section */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  margin: 20px auto; /* Center align with some spacing */
+}
+
+.about h1 {
+  font-size: 1.8rem; /* Smaller heading size */
+  color: #000000; /* Dark blue-gray for the title */
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about p {
+  font-size: 1rem; /* Smaller text for compact appearance */
+  line-height: 1.5;
+  color: #555; /* Softer dark gray for the text */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    max-width: 90%; /* Ensure it fits on smaller screens */
+    padding: 15px;
+  }
+
+  .about h1 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .about p {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding: 15px 5px;
+  }
+}

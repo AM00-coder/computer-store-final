@@ -1,0 +1,94 @@
+body {
+  background-color: #d31717;
+  color: #f1f1f1;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h2, h3, p {
+  color: #e21616;
+}
+
+/* Product form card */
+.card {
+  background-color: #ce2121;
+  border: 1px solid #ef1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}               
+
+/* Inputs */
+input.form-control, select, textarea {
+  background-color: #f9f9f9;
+  color: #ff0000;
+  border: 1px solid #ea0808;
+}
+
+input.form-control::placeholder {
+  color: #cc1010;
+}
+
+/* Buttons */
+button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin-right: 6px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-primary {
+  background-color: #ff0000;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #d90000;
+}
+
+.btn-secondary {
+  background-color: #7d6c6c;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Table */
+.table {
+  background-color: #de1818;
+  color: #f1f1f1;
+}
+
+.table th {
+  background-color: #e11010;
+  color: #ffffff;
+}
+
+.table td {
+  background-color: #e71c1c;
+  vertical-align: middle;
+}
+
+.table img {
+  border-radius: 6px;
+}
+
+/* Badges */
+.badge.bg-success {
+  background-color: #28a745;
+}
+.badge.bg-secondary {
+  background-color: #6c757d;
+}

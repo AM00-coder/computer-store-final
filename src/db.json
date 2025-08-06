@@ -1,0 +1,389 @@
+{
+  "users": [
+    {
+      "name": "Haitham",
+      "mail": "85eegt@gmail.com",
+      "password": "Ah1234",
+      "birthDate": "2002-02-23",
+      "gender": "male",
+      "isAdmin": "true",
+      "avatar": "assets/Haitham.jpg",
+      "id": "8031"
+    },
+    {
+      "name": "Ayham",
+      "mail": "Ayham.haj30@gmail.com",
+      "password": "Ah1234",
+      "birthDate": "2000-09-30",
+      "gender": "male",
+      "isAdmin": "true",
+      "avatar": "/assets/Ayham.jpg",
+      "id": "6ecc"
+    },
+    {
+      "name": "harel",
+      "mail": "harel@gmail.com",
+      "password": "12345678",
+      "birthDate": "2001-04-13T00:00:00.000Z",
+      "gender": "male",
+      "isAdmin": "false",
+      "avatar": "/assets/Ayham.jpg",
+      "id": "697a"
+    },
+    {
+      "name": "darky",
+      "mail": "darky@gmail.com",
+      "password": "Ah12345678.",
+      "birthDate": "1111-11-11T00:00:00.000Z",
+      "gender": "male",
+      "isAdmin": false,
+      "avatar": "/assets/male.jpg",
+      "id": "a923"
+    },
+    {
+      "id": "06b5",
+      "name": "haha",
+      "mail": "haha@gmail.com",
+      "password": "Ah12345678.",
+      "birthDate": "1111-11-11T00:00:00.000Z",
+      "gender": "male",
+      "isAdmin": false,
+      "avatar": "assets/female.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "RTX 4060TI",
+      "price": 499,
+      "image": "assets/rtx4060.jpg",
+      "description": "This is a powerful GPU for gaming and work.",
+      "category": "graphic card",
+      "isPopular": false
+    },
+    {
+      "id": "2",
+      "name": "RTX 3060TI",
+      "price": 299,
+      "image": "assets/rtx3060.jpg",
+      "description": "Mid-tier GPU suitable for high-end gaming.",
+      "category": "graphic card",
+      "isPopular": true
+    },
+    {
+      "id": "3",
+      "name": "RTX 4070TI",
+      "price": 699,
+      "image": "assets/rtx4070.jpg",
+      "description": "Great performance for 4K gaming and VR.",
+      "category": "graphic card",
+      "isPopular": false
+    },
+    {
+      "id": "4",
+      "name": "RTX 4080",
+      "price": 899,
+      "image": "assets/rtx4080.jpg",
+      "description": "Exceptional graphics card for demanding tasks.",
+      "category": "graphic card",
+      "isPopular": false
+    },
+    {
+      "id": "5",
+      "name": "RTX 4090",
+      "price": 1500,
+      "image": "assets/rtx4090.jpg",
+      "description": "Top-tier GPU, ultimate performance for creators and gamers.",
+      "category": "graphic card",
+      "isPopular": false
+    },
+    {
+      "id": "6",
+      "name": "NVIDIA RTX 3090TI",
+      "price": 2500,
+      "image": "assets/RTX4080TI.jpg",
+      "description": "The NVIDIA RTX 3090TI is a flagship graphics card that delivers unparalleled performance for gaming, 3D rendering, and AI workloads.",
+      "category": "graphic card",
+      "isPopular": false
+    },
+    {
+      "id": "7",
+      "name": "Intel i9-11900K",
+      "price": 1099.99,
+      "image": "assets/intel.jpg",
+      "description": "The Intel i9-11900K is a high-performance CPU designed for gamers and creators.",
+      "category": "cpu",
+      "isPopular": true
+    },
+    {
+      "id": "8",
+      "name": "AMD Ryzen 9 5900X",
+      "price": 5500,
+      "image": "assets/amd-ryzen9.jpg",
+      "description": "The AMD Ryzen 9 5900X delivers exceptional multi-core performance.",
+      "category": "cpu",
+      "isPopular": false
+    },
+    {
+      "id": "9",
+      "name": "Intel Core i7-10700K",
+      "price": 3500,
+      "image": "assets/intel-i7.jpg",
+      "description": "The Intel Core i7-10700K features 8 cores and 16 threads, designed for gaming and productivity.",
+      "category": "cpu",
+      "isPopular": false
+    },
+    {
+      "id": "10",
+      "name": "AMD Ryzen 7 5800X",
+      "price": 4200,
+      "image": "assets/amd-ryzen7.jpg",
+      "description": "The AMD Ryzen 7 5800X offers 8 cores and 16 threads for outstanding performance.",
+      "category": "cpu",
+      "isPopular": false
+    },
+    {
+      "id": "11",
+      "name": "Corsair Vengeance 32GB",
+      "price": 300,
+      "image": "assets/corsair.jpg",
+      "description": "The Corsair Vengeance 32GB DDR4 RAM ensures fast and reliable performance.",
+      "category": "ram",
+      "isPopular": false
+    },
+    {
+      "id": "12",
+      "name": "Kingston Fury 16GB DDR4",
+      "price": 90,
+      "image": "assets/kingston-fury.jpg",
+      "description": "Kingston Fury DDR4 RAM delivers high-speed performance and reliability.",
+      "category": "ram",
+      "isPopular": false
+    },
+    {
+      "id": "13",
+      "name": "HyperX Predator 32GB DDR4",
+      "price": 160,
+      "image": "assets/hyperx-predator.jpg",
+      "description": "HyperX Predator DDR4 ensures peak performance and stability.",
+      "category": "ram",
+      "isPopular": false
+    },
+    {
+      "id": "14",
+      "name": "ADATA XPG SX8200 Pro 1TB SSD",
+      "price": 150,
+      "image": "assets/adata-xpg.jpg",
+      "description": "ADATA XPG SX8200 Pro delivers fast storage for gaming.",
+      "category": "rom",
+      "isPopular": false
+    },
+    {
+      "id": "15",
+      "name": "Samsung 980 PRO 1TB SSD",
+      "price": 199,
+      "image": "assets/samsung-980pro.jpg",
+      "description": "Samsung 980 PRO SSD offers lightning-fast read and write speeds.",
+      "category": "rom",
+      "isPopular": false
+    },
+    {
+      "id": "16",
+      "name": "Dell 24\" Ultrasharp Monitor",
+      "price": 350,
+      "image": "assets/Monitor2.jpg",
+      "description": "The Dell 24\" Ultrasharp monitor delivers exceptional color accuracy.",
+      "category": "monitor",
+      "isPopular": true
+    },
+    {
+      "id": "17",
+      "name": "LG 34\" UltraWide Monitor",
+      "price": 750,
+      "image": "assets/Monitor3.jpg",
+      "description": "The LG 34\" UltraWide monitor enhances productivity with its wide screen.",
+      "category": "monitor",
+      "isPopular": false
+    },
+    {
+      "id": "18",
+      "name": "Acer Predator X34",
+      "price": 1200,
+      "image": "assets/Monitor5.jpg",
+      "description": "The Acer Predator X34 is a top-tier gaming monitor with an ultra-wide curved screen.",
+      "category": "monitor",
+      "isPopular": false
+    },
+    {
+      "id": "19",
+      "name": "ASUS ROG Swift PG35VQ",
+      "price": 2500,
+      "image": "assets/Monitor6.jpg",
+      "description": "The ASUS ROG Swift PG35VQ is a 35\" ultra-wide gaming monitor with a 200Hz refresh rate.",
+      "category": "monitor",
+      "isPopular": false
+    },
+    {
+      "id": "20",
+      "name": "AMD Ryzen 9 5900X",
+      "price": 5500,
+      "image": "assets/amd-ryzen9.jpg",
+      "description": "The AMD Ryzen 9 5900X delivers exceptional multi-core performance with 12 cores and 24 threads, perfect for high-end gaming, 3D rendering, and content creation.",
+      "category": "cpu",
+      "isPopular": false
+    },
+    {
+      "id": "21",
+      "name": "Intel Core i7-10700K",
+      "price": 3500,
+      "image": "assets/intel-i7.jpg",
+      "description": "The Intel Core i7-10700K features 8 cores and 16 threads, designed for both gaming and productivity tasks with turbo speeds up to 5.1 GHz.",
+      "category": "cpu",
+      "isPopular": false
+    },
+    {
+      "id": "22",
+      "name": "AMD Ryzen 7 5800X",
+      "price": 4200,
+      "image": "assets/amd-ryzen7.jpg",
+      "description": "The AMD Ryzen 7 5800X offers 8 cores and 16 threads, designed to deliver outstanding gaming and multitasking performance with its superior architecture.",
+      "category": "cpu",
+      "isPopular": false
+    },
+    {
+      "id": "23",
+      "name": "Intel Core i5-11600K",
+      "price": 2500,
+      "image": "assets/intel-i5.jpg",
+      "description": "The Intel Core i5-11600K is a 6-core CPU designed for gamers who want high performance at a more affordable price, offering great speeds and efficiency for gaming and multitasking.",
+      "category": "cpu",
+      "isPopular": false
+    },
+    {
+      "id": "24",
+      "name": "AMD Ryzen 5 5600X",
+      "price": 3000,
+      "image": "assets/amd-ryzen5.jpg",
+      "description": "The AMD Ryzen 5 5600X offers great gaming and productivity performance with 6 cores and 12 threads, making it an ideal choice for budget-conscious gamers.",
+      "category": "cpu",
+      "isPopular": false
+    },
+    {
+      "id": "25",
+      "name": "Kingston Fury 16GB DDR4",
+      "price": 90,
+      "image": "assets/kingston-fury.jpg",
+      "description": "Kingston Fury DDR4 RAM delivers high-speed performance and reliability for gamers and content creators.",
+      "category": "ram",
+      "isPopular": false
+    },
+    {
+      "id": "26",
+      "name": "HyperX Predator 32GB DDR4",
+      "price": 160,
+      "image": "assets/hyperx-predator.jpg",
+      "description": "HyperX Predator DDR4 ensures peak performance and stability for gaming and multitasking.",
+      "category": "ram",
+      "isPopular": false
+    },
+    {
+      "id": "27",
+      "name": "G.Skill Trident Z RGB 16GB",
+      "price": 120,
+      "image": "assets/gskill-trident.jpg",
+      "description": "G.Skill Trident Z RGB offers blazing speeds with customizable RGB lighting for stylish builds.",
+      "category": "ram",
+      "isPopular": false
+    },
+    {
+      "id": "28",
+      "name": "Crucial Ballistix 16GB DDR4",
+      "price": 75,
+      "image": "assets/crucial-ballistix.jpg",
+      "description": "Crucial Ballistix is a reliable RAM for gaming, video editing, and everyday computing.",
+      "category": "ram",
+      "isPopular": false
+    },
+    {
+      "id": "29",
+      "name": "Patriot Viper Steel 16GB",
+      "price": 85,
+      "image": "assets/patriot-viper.jpg",
+      "description": "Patriot Viper Steel delivers exceptional performance for intense gaming and work.",
+      "category": "ram",
+      "isPopular": false
+    },
+    {
+      "id": "30",
+      "name": "Corsair Dominator Platinum 32GB",
+      "price": 250,
+      "image": "assets/corsair-dominator.jpg",
+      "description": "Corsair Dominator Platinum combines style and high performance for advanced PC builds.",
+      "category": "ram",
+      "isPopular": false
+    },
+    {
+      "id": "31",
+      "name": "Samsung 980 PRO 1TB SSD",
+      "price": 199,
+      "image": "assets/samsung-980pro.jpg",
+      "description": "Samsung 980 PRO SSD offers lightning-fast read and write speeds for gaming and professional workloads.",
+      "category": "rom",
+      "isPopular": false
+    },
+    {
+      "id": "32",
+      "name": "WD Black SN850 1TB SSD",
+      "price": 189,
+      "image": "assets/wd-black-sn850.jpg",
+      "description": "WD Black SN850 delivers unmatched speed and reliability for gaming PCs.",
+      "category": "rom",
+      "isPopular": false
+    },
+    {
+      "id": "33",
+      "name": "Crucial MX500 1TB SSD",
+      "price": 125,
+      "image": "assets/crucial-mx500.jpg",
+      "description": "Crucial MX500 provides excellent speed and durability for upgrading laptops and desktops.",
+      "category": "rom",
+      "isPopular": false
+    },
+    {
+      "id": "34",
+      "name": "Seagate FireCuda 530 2TB SSD",
+      "price": 359,
+      "image": "assets/seagate-firecuda.jpg",
+      "description": "Seagate FireCuda 530 is designed for gamers needing massive storage and speed.",
+      "category": "rom",
+      "isPopular": false
+    },
+    {
+      "id": "35",
+      "name": "Kingston NV1 1TB SSD",
+      "price": 100,
+      "image": "assets/kingston-nv1.jpg",
+      "description": "Kingston NV1 SSD ensures smooth and responsive performance for everyday tasks.",
+      "category": "rom",
+      "isPopular": false
+    },
+    {
+      "id": "36",
+      "name": "ADATA XPG SX8200 Pro 1TB SSD",
+      "price": 150,
+      "image": "assets/adata-xpg.jpg",
+      "description": "ADATA XPG SX8200 Pro delivers fast storage for gaming and creative applications.",
+      "category": "rom",
+      "isPopular": false
+    },
+    {
+      "id": "37",
+      "name": "NVIDIA RTX 5090",
+      "price": 699.99,
+      "image": "assets/rtx5090.jpg",
+      "category": "Graphic Card",
+      "isPopular": "true"
+    }
+
+  ]
+}

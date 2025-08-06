@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Light background for contrast */
+  }
+  
+  main {
+    padding-top: 60px; /* Offset for the fixed navbar */
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    position: fixed; /* Keeps the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #8b0000; /* Dark red background */
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    z-index: 1000; /* Keeps the navbar above other elements */
+  }
+  
+  /* Center Links in the Middle */
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centers the links horizontally */
+    align-items: center; /* Ensures vertical alignment */
+    flex-grow: 1; /* Pushes links to occupy the center */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Spacing Between Links */
+  .navbar-links li {
+    margin: 0 15px; /* Adds spacing between each link */
+  }
+  
+  /* Individual Link Styles */
+  .navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover Effects */
+  .navbar-links a:hover {
+    background-color: #ff4500; /* Bright orange-red for hover */
+    color: #fff; /* Maintain white text on hover */
+  }
+  
+  /* Logo Styles */
+  .navbar-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff6347; /* Tomato red for logo */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-right: auto; /* Pushes the logo to the far left */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .navbar-links li {
+      margin: 10px 0;
+    }
+  }
+  

@@ -1,0 +1,78 @@
+<section class="vh-100 mt-5" style="background-color: #faf7f8;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+                <div class="card" style="border-radius: 1rem;">
+                    <div class="row g-0">
+                        <div class="col-md-6 col-lg-5 d-none d-md-block">
+                            <img src="assets/bg.jpg" alt="register form" class="img-fluid"
+                            style="border-radius: 1rem 0 0 1rem; height:100%;" />
+                        </div>
+                        <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                            <div class="card-body p-4 p-lg-5 text-black">
+                                <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+                                    <div class="d-flex align-items-center mb-3 pb-1">
+                                        <i class="fas fa-user-plus fa-2x me-3" style="color: #ff6219;"></i>
+                                        <span class="h1 fw-bold mb-0" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Register</span>
+                                    </div>
+                                     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Create your account</h5>
+                                     <!-- Full Name -->
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="formName">Full Name</label>
+                                        <input type="text" id="formName" class="form-control form-control-lg" formControlName="name" placeholder="Enter your full name" />
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="formEmail">Email address</label>
+                                        <input type="email" id="formEmail" class="form-control form-control-lg" formControlName="mail" placeholder="Enter your email address" />
+                                    </div>
+                                    <!-- Password -->
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="formPassword">Password</label>
+                                        <input type="password" id="formPassword" class="form-control form-control-lg" formControlName="password" placeholder="Enter your password" />
+                                    </div>
+                                    <!-- Birth Date -->
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="formBirthDate">Birth Date</label>
+                                        <input type="date" id="formBirthDate" class="form-control form-control-lg" formControlName="birthDate" />
+                                    </div>
+                                    <!-- Gender -->
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="formGender">Gender</label>
+                                        <select id="formGender" class="form-control form-control-lg" formControlName="gender">
+                                            <option value="" disabled selected>Select your gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                             <!-- Avatar Upload -->
+<div class="mb-4">
+    <label class="form-label">Choose Avatar (Optional)</label>
+    <div class="avatar-selection">
+        <label>
+            <input type="radio" name="avatar" value="avatar1.png">
+            <img src="assets/male.jpg" alt="Male Avatar">
+        </label>
+        <label>
+            <input type="radio" name="avatar" value="avatar2.png">
+            <img src="assets/female.jpg" alt="Female Avatar">
+        </label>
+    </div>
+</div>
+
+                                    
+                                    <!-- Submit Button -->
+                                    <div class="pt-1 mb-4">
+                                        <button class="btn btn-dark btn-lg btn-block" type="submit">Register</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

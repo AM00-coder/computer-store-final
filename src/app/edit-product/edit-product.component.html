@@ -1,0 +1,74 @@
+<div class="container mt-4 text-white">
+  <h2 class="text-info mb-3">Edit Product</h2>
+
+  <form [formGroup]="editProductForm" (ngSubmit)="edit()">
+
+    <!-- Hidden ID -->
+    <input type="hidden" formControlName="_id" />
+
+    <!-- Name -->
+    <div class="mb-3">
+      <label for="name" class="form-label">Product Name</label>
+      <input type="text" class="form-control" id="name" formControlName="name" />
+    </div>
+
+    <!-- Price -->
+    <div class="mb-3">
+      <label for="price" class="form-label">Product Price</label>
+      <input type="number" class="form-control" id="price" formControlName="price" />
+    </div>
+
+    <!-- Image -->
+    <div class="mb-3">
+      <label for="image" class="form-label">Product Image</label>
+      <input type="file" class="form-control" id="image" (change)="onFileSelected($event)" accept="image/*" />
+      <img *ngIf="selectedImageUrl" [src]="selectedImageUrl" alt="Preview" class="mt-2" style="width: 120px; border-radius: 6px;" />
+    </div>
+
+    <!-- Description -->
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" class="form-control" id="description" formControlName="description" />
+    </div>
+
+    <!-- Category -->
+    <div class="mb-3">
+      <label for="category" class="form-label">Category</label>
+      <select class="form-control" id="category" formControlName="category">
+        <option value="" disabled>Select a category</option>
+        <option value="Graphic Card">Graphic Card</option>
+        <option value="Motherboards">Motherboards</option>
+        <option value="Monitors">Monitors</option>
+        <option value="CPU">CPU</option>
+        <option value="RAM">RAM</option>
+        <option value="ROM">ROM</option>
+      </select>
+    </div>
+
+    <!-- Popular -->
+    <div class="mb-3">
+  <label class="form-label">Is Product Popular?</label><br />
+  <div class="form-check form-check-inline">
+    <input type="radio" class="form-check-input" id="popularYes" [value]="true" formControlName="isPopular" />
+    <label for="popularYes" class="form-check-label">Yes</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input type="radio" class="form-check-input" id="popularNo" [value]="false" formControlName="isPopular" />
+    <label for="popularNo" class="form-check-label">No</label>
+  </div>
+</div>
+
+
+    <!-- ✅ SINGLE Submit Button -->
+<button type="submit" class="btn btn-success mt-3">
+  Update Product
+</button>
+
+    <!-- Debug info -->
+    <div class="text-warning mt-2">
+      <p>Form Valid: {{ editProductForm.valid }}</p>
+      <pre>{{ editProductForm.value | json }}</pre>
+    </div>
+
+  </form>
+</div>

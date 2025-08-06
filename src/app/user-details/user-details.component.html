@@ -1,0 +1,14 @@
+<br>
+<br>
+<div *ngIf="loggedInUser" class="user-details">
+    <h2>Welcome, {{ loggedInUser.name }}!</h2>
+    <img [src]="loggedInUser.avatar" alt="User Avatar" class="user-avatar">
+    <p><strong>Email:</strong> {{ loggedInUser.email }}</p>
+    <p><strong>Birth Date:</strong> {{ bDate}}</p>
+    <p><strong>Gender:</strong> {{ loggedInUser.gender }}</p>
+  </div>
+  
+  <div *ngIf="!loggedInUser" class="no-user">
+    <p>No user is logged in.</p>
+  </div>
+  

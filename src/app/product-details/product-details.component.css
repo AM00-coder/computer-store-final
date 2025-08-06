@@ -1,0 +1,99 @@
+/* Container for Product Details */
+.product-details {
+  margin-top: 100px;
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-30px);
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Title of the Product */
+.product-details h1 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* Product Image Styling */
+.product-details img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-details img:hover {
+  transform: scale(1.1);
+}
+
+/* Description and Price Text */
+.product-details p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.product-details p strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Back to Home Button Styling */
+.product-details .back-to-home {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+/* Hover Effect on Back to Home Button */
+.product-details .back-to-home:hover {
+  background-color: #218838;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Button Focus State */
+.product-details .back-to-home:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.3);
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

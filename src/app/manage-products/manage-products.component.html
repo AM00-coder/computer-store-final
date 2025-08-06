@@ -1,0 +1,78 @@
+<br>
+<p class="h4">🛠️ Manage Products</p>
+
+<!-- ✅ Add Product Inline Form -->
+<div class="card mb-4 p-3">
+  <form [formGroup]="productForm" (ngSubmit)="submitProduct()">
+    <div class="row g-3 align-items-center">
+      <div class="col-md-2">
+        <input type="text" class="form-control" placeholder="Name" formControlName="name" />
+      </div>
+      <div class="col-md-2">
+        <input type="number" class="form-control" placeholder="Price" formControlName="price" />
+      </div>
+      <div class="col-md-2">
+       <input type="file" class="form-control" (change)="onImageSelected($event)" accept="image/*" />
+      <img *ngIf="selectedImageUrl" [src]="selectedImageUrl" style="width: 100px; margin-top: 5px;" />
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" placeholder="Description" formControlName="description" />
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" placeholder="Category" formControlName="category" />
+      </div>
+      <div class="col-md-1 form-check">
+        <input type="checkbox" class="form-check-input" id="isPopular" formControlName="isPopular" />
+        <label class="form-check-label" for="isPopular">Popular</label>
+      </div>
+      <div class="col-md-1">
+        <button type="submit" class="btn btn-success">Add</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- 🔍 Search Form -->
+<form [formGroup]="searchForm" (ngSubmit)="search()">
+  <div class="mb-3 p-3 border rounded bg-light">
+    <label for="price" class="form-label">Search by price</label>
+    <input type="number" class="form-control mb-2" id="price" name="price" formControlName="price">
+    <button type="submit" class="btn btn-primary me-2">Search</button>
+    <button class="btn btn-secondary" type="button" (click)="clear()">Clear</button>
+  </div>
+</form>
+
+<!-- 📦 Product Table -->
+<table class="table table-striped table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>_id</th>
+      <th>name</th>
+      <th>price</th>
+      <th>image</th>
+      <th>description</th>
+      <th>category</th>
+      <th>isPopular</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product._id }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>
+        <img [src]="product.image" alt="{{ product.name }}" style="width: 100px; height: auto;" />
+      </td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.category }}</td>
+      <td>
+        <span *ngIf="product.isPopular" class="badge bg-success">Yes</span>
+        <span *ngIf="!product.isPopular" class="badge bg-secondary">No</span>
+      </td>
+      <td>
+        <a [routerLink]="['/editProduct', product._id]" class="btn btn-sm btn-primary">Edit</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,19 @@
+<div class="about-container" [class.dark-theme]="isBlackBackground" [class.light-theme]="!isBlackBackground">
+  <br>
+  <h1>About Our Project</h1>
+  <p>
+    Welcome to our project! We are passionate students working together to create a modern and user-friendly website.
+  </p>
+
+  <div class="member" *ngFor="let admin of admins">
+    <img [src]="admin.image" alt="Haitham" class="member-img">
+    <p class="member-name">{{admin.name}}</p>
+    <p class="member-id">{{admin.Id}}</p>
+
+  </div>
+
+
+
+  <!-- Button to toggle background color and theme -->
+  <button class="toggle-btn" (click)="toggleBackground()">Toggle Background</button>
+</div>

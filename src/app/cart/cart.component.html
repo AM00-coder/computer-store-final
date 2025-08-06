@@ -1,0 +1,28 @@
+<p>🛒 Cart is working</p>
+
+<!-- DEBUG: show raw cart object -->
+<p *ngIf="!cart.items || cart.items.length === 0">🤔 Nothing loaded in cart.items</p>
+<!-- CART UI -->
+<div class="cart-container" *ngIf="cart && cart.items.length > 0; else emptyCart">
+  <h2>Your Cart</h2>
+
+  <div *ngFor="let item of cart.items" class="cart-item">
+    <h3>{{ item.name }}</h3>
+    <img *ngIf="item.image" [src]="item.image" width="100" />
+    <p>Price: {{ item.price }} ₪</p>
+    <p>Quantity: {{ item.quantity }}</p>
+    <p>Subtotal: {{ item.price * item.quantity }} ₪</p>
+
+    <button (click)="increase(item.productId)">+</button>
+    <button (click)="decrease(item.productId)">-</button>
+    <button (click)="remove(item.productId)">Remove</button>
+  </div>
+
+  <h3>Total: {{ cart.totalPrice }} ₪</h3>
+  <button (click)="pay()">Pay</button>
+  <button (click)="clearCart()">Clear Cart</button>
+</div>
+
+<ng-template #emptyCart>
+  <p>🚫 Your cart is empty.</p>
+</ng-template>

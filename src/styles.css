@@ -1,0 +1,33 @@
+body {
+  background-color: #ffffff;
+  color: #f1f1f1;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+input, select, textarea, button, .form-control {
+  background-color: #67bbdc;
+  color: #ffffff;
+  border: 1px solid #ea2d2d;
+}
+
+input::placeholder {
+  color: #aaaaaa;
+}
+
+.table {
+  background-color: #e73b3b;
+  color: #f1f1f1;
+}
+
+.table thead {
+  background-color: #dc2727;
+}
+
+.card {
+  background-color: #f32c2c;
+  color: #ffffff;
+}
+
+button {
+  border: none;
+}

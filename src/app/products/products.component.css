@@ -1,0 +1,149 @@
+/* Container for all products */
+.products-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 20px; /* Space between product cards */
+  justify-content: center; /* Center-aligns the cards */
+  align-items: stretch; /* Ensures all cards are the same height */
+  padding: 20px; /* Padding around the container */
+  background-color: #ffffff; /* Light gray for contrast */
+  max-width: 1200px; /* Limit the width of the container */
+  border-radius: 10px; /* Smooth corners */
+}
+/* Heading styling for a more polished look */
+h1 {
+  font-family: 'Poppins', sans-serif; /* Clean, modern font */
+  font-size: 50px; /* Increased font size for emphasis */
+  font-weight: 800; /* Extra bold to make it stand out */
+  color: #2c3e50; /* Dark gray color for professionalism */
+  text-align: center;
+  margin: 50px auto; /* Added top and bottom margin for spacing */
+  text-transform: uppercase; /* Uppercase for a strong, impactful look */
+  letter-spacing: 3px; /* Increased letter spacing for a more spaced out effect */
+  line-height: 1.4; /* Improved line height for readability */
+  position: relative; /* Allows for the decorative effect */
+  padding: 0 20px; /* Padding on the left and right for better alignment */
+}
+
+/* Decorative underline for emphasis */
+h1::after {
+  content: '';
+  display: block;
+  width: 200px; /* Wider line for more emphasis */
+  height: 5px;
+  background-color: #e74c3c; /* Red accent color */
+  margin: 20px auto 0;
+  border-radius: 3px;
+}
+
+/* Subtle hover effect */
+h1:hover {
+  color: #e74c3c; /* Change color to the accent color */
+  text-decoration: underline; /* Underline text on hover for interactivity */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transform: translateY(-5px); /* Slight lift effect for dynamic feel */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Individual product card */
+.product {
+  background-color: #ffffff; /* White background for the card */
+  width: 300px; /* Fixed width for larger, visible cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-8px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Card image */
+.member-img {
+  width: 100%; /* Full width of the card */
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Maintains aspect ratio and fills the container */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product:hover .member-img {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Card body */
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Product name */
+.product-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50; /* Dark gray text */
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+/* Product price */
+.product-price {
+  font-size: 18px;
+  color: #e74c3c; /* Red for emphasis */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Add to Cart button */
+.add-to-cart-btn {
+  background-color: #16a085; /* Green color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #1abc9c; /* Brighter green */
+  transform: scale(1.05); /* Slight zoom */
+}
+
+.add-to-cart-btn:active {
+  transform: scale(0.95); /* Pressed effect */
+}
+
+/* Product details link */
+.product-details-link {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #3498db; /* Blue color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.product-details-link:hover {
+  color: #2980b9; /* Darker blue */
+}
+
+
+@media (max-width: 768px) {
+  .product {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .member-img {
+    height: 180px; /* Adjust image height for smaller screens */
+  }
+}
+h1 {
+  font-size: 40px; /* Slightly smaller text for smaller screens */
+  margin: 30px auto; /* Adjusted margin for better positioning */
+}

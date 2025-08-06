@@ -1,0 +1,98 @@
+/* Light theme styles */
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+.light-theme .member {
+  background-color: #f9f9f9;
+  color: black;
+}
+
+/* Dark theme styles */
+.dark-theme {
+  background-color: black;
+  color: white;
+}
+
+.dark-theme .member {
+  background-color: #333;
+  color: white;
+}
+
+/* General styles */
+.about-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.member {
+  margin: 20px 0;
+  padding: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+.member-img {
+  width: 550px; /* Increase the width */
+  height: 550px; /* Increase the height */
+  border-radius: 10%;
+  object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
+}
+
+.member-name, .member-id {
+  margin: 5px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+h1 {
+  font-family: 'Poppins', sans-serif; /* Clean, modern font */
+  font-size: 50px; /* Increased font size for emphasis */
+  font-weight: 800; /* Extra bold to make it stand out */
+  color: #2c3e50; /* Dark gray color for professionalism */
+  text-align: center;
+  margin: 50px auto; /* Added top and bottom margin for spacing */
+  text-transform: uppercase; /* Uppercase for a strong, impactful look */
+  letter-spacing: 3px; /* Increased letter spacing for a more spaced out effect */
+  line-height: 1.4; /* Improved line height for readability */
+  position: relative; /* Allows for the decorative effect */
+  padding: 0 20px; /* Padding on the left and right for better alignment */
+}
+
+/* Decorative underline for emphasis */
+h1::after {
+  content: '';
+  display: block;
+  width: 200px; /* Wider line for more emphasis */
+  height: 5px;
+  background-color: #e74c3c; /* Red accent color */
+  margin: 20px auto 0;
+  border-radius: 3px;
+}
+
+/* Subtle hover effect */
+h1:hover {
+  color: #e74c3c; /* Change color to the accent color */
+  text-decoration: underline; /* Underline text on hover for interactivity */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transform: translateY(-5px); /* Slight lift effect for dynamic feel */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+h1 {
+  font-size: 40px; /* Slightly smaller text for smaller screens */
+  margin: 30px auto; /* Adjusted margin for better positioning */
+}}
