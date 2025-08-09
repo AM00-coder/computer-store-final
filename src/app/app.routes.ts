@@ -12,7 +12,9 @@ import { ManageProductsComponent } from './manage-products/manage-products.compo
 import { RegisterComponent } from './register/register.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
-import { CartComponent } from './cart/cart.component'; // 👈 אל תשכח להוסיף את זה
+import { CartComponent } from './cart/cart.component';
+import { PaymentComponent } from './pages/payment/payment.component';
+
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -27,5 +29,10 @@ export const routes: Routes = [
   { path: 'editProduct/:id', component: EditProductComponent },
   { path: 'userdetails', component: UserDetailsComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'payment', component:PaymentComponent },
+  { path: 'builds', loadComponent: () => import('./builds/builds-list/builds-list.component').then(m => m.BuildsListComponent) },
+  { path: 'builds/:id', loadComponent: () => import('./builds/build-detail/build-detail.component').then(m => m.BuildDetailComponent) },
   { path: '**', component: NotFoundComponent }
+
+
 ];

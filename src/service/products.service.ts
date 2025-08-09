@@ -58,9 +58,10 @@ export class ProductsService {
     image: string,
     description: string,
     category: string,
-    isPopular: boolean
+    isPopular: boolean,
+    quantity: number
   ): void {
-    const product = new Product(name, price, image, description, category, isPopular);
+    const product = new Product(name, price, image, description, category, isPopular, quantity);
     this.insert(product).subscribe((response: any) => {
       if (response && response._id) {
         product._id = response._id;
@@ -83,5 +84,9 @@ update(product: Product): Observable<any> {
       this.products[index] = updatedProduct;
     }
   }
+  deleteProduct(id: string) {
+  return this.http.delete(`http://localhost:3000/products/${id}`);
+}
+
   
 }

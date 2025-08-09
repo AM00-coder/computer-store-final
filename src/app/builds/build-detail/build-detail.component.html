@@ -1,0 +1,51 @@
+
+<div class="container py-4">
+  <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+    <h3 class="text-light mb-0">{{ build?.name }}</h3>
+    <span
+      class="badge"
+      [ngClass]="build?.isPaid ? 'bg-success' : 'bg-secondary'"
+      >{{ build?.isPaid ? 'Paid' : 'Draft' }}</span
+    >
+    <div class="ms-auto d-flex gap-2">
+      <button class="btn btn-outline-secondary" (click)="rename()">Rename</button>
+      <button class="btn btn-success" (click)="goToCheckout()">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Items -->
+  <div class="card shadow-sm">
+    <div class="list-group list-group-flush">
+      <div
+        class="list-group-item d-flex align-items-center gap-3"
+        *ngFor="let it of build?.items"
+      >
+        <img
+          [src]="it.productId?.image"
+          alt=""
+          class="rounded"
+          style="width:56px;height:56px;object-fit:cover"
+        />
+        <div class="flex-grow-1">
+          <div class="fw-semibold">{{ it.productId?.name }}</div>
+          <div class="text-muted small">
+            {{ it.productId?.category }} • ${{ it.productId?.price | number:'1.2-2' }}
+          </div>
+          <div class="text-muted small">Qty: {{ it.quantity }}</div>
+        </div>
+
+        <button
+          class="btn btn-outline-danger btn-sm"
+          (click)="removeItem(it.productId?._id)"
+        >
+          Remove
+        </button>
+      </div>
+    </div>
+
+    <div class="card-footer d-flex justify-content-between align-items-center">
+      <div class="text-muted">Total</div>
+      <div class="fs-5 fw-semibold">${{ build?.totalPrice | number:'1.2-2' }}</div>
+    </div>
+  </div>
+</div>

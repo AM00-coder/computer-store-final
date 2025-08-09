@@ -19,8 +19,10 @@
   </div>
 
   <h3>Total: {{ cart.totalPrice }} ₪</h3>
-  <button (click)="pay()">Pay</button>
   <button (click)="clearCart()">Clear Cart</button>
+  <button class="btn btn-success" (click)="proceedToPayment()">Pay</button>
+
+
 </div>
 
 <ng-template #emptyCart>

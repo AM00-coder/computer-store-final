@@ -44,10 +44,12 @@ add(){
   let description = this.addProductForm.value.description;
   let category = this.addProductForm.value.category;
   let isPopular = this.addProductForm.value.isPopular;
-  this.productsService.add(name,price,this.selectedImage,description,category,isPopular);
+  let quantity = this.addProductForm.value.quantity;
+  this.productsService.add(name,price,this.selectedImage,description,category,isPopular,quantity);
   alert("yay")
   this.router.navigateByUrl('manageProduct')
 //this.addProductForm.reset()
 }
+
 
 }

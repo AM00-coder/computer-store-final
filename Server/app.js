@@ -25,10 +25,13 @@ app.use((req, res, next) => {
 const users = require("./Routes/user.route");
 const products = require("./Routes/product.route");
 const cartsRouter = require("./Routes/cart.route");
+const buildsRouter = require('./Routes/build.route');
+
 
 app.use("/users", users);
 app.use("/products", products);
 app.use("/cart", cartsRouter);
+app.use('/builds', buildsRouter);
 
 // ✅ Start server
 app.listen(PORT, (err) => {

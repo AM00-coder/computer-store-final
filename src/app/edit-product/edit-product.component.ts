@@ -32,10 +32,10 @@ export class EditProductComponent implements OnInit {
       image: [''],
       description: ['', Validators.required],
       category: ['', Validators.required],
-      isPopular: [false, Validators.required] // use boolean not string
+      isPopular: [false, Validators.required], // use boolean not string
     });
 
-    const _id = this.route.snapshot.paramMap.get('_id');
+    const _id = this.route.snapshot.paramMap.get('id');
     if (_id) {
       this.productService.getProductById(_id).subscribe((product) => {
         if (product) {
@@ -85,7 +85,8 @@ export class EditProductComponent implements OnInit {
       image: formValues.image,
       description: formValues.description,
       category: formValues.category,
-      isPopular: formValues.isPopular
+      isPopular: formValues.isPopular,
+      quantity:formValues.quantity
     };
 
     console.log("🟡 ID to update:", updatedProduct._id);
@@ -94,7 +95,7 @@ export class EditProductComponent implements OnInit {
     this.productService.update(updatedProduct).subscribe({
       next: () => {
         alert("✅ Product updated!");
-        this.router.navigate(['/manage-product']); // optional redirect
+        this.router.navigate(['/manageProduct']); // optional redirect
       },
       error: (err) => {
         console.error("❌ Error updating product:", err);

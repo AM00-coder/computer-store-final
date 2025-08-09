@@ -1,9 +1,12 @@
 <div class="row">
-    <div class="col-3">
-        <app-sidebar (categorySelected)="onCategorySelected($event)"></app-sidebar> 
-    </div>
-    <div class="col mb-5">
-        <app-products [filterProducts] = 'selectedCategory'></app-products>
-    </div>
+  <div class="col-3">
+    <app-sidebar (categorySelected)="onCategorySelected($event)"></app-sidebar>
+  </div>
+  
+  <div class="col mb-5">
+    <app-products 
+      [filterProducts]="selectedCategory"
+      (addToCartClicked)="addToCart($event)">
+    </app-products>
+  </div>
 </div>
-

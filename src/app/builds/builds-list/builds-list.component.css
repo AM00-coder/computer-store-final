@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  background: #0f1115; /* subtle dark bg */
+  min-height: 100%;
+}
+
+.build-card {
+  background: #181c22;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: #e7ebf0;
+}
+.build-card .card-title { color: #fff; }
+.list-group-item { background: #181c22; color: #e7ebf0; }
+.card-footer { background: #151920; border-top: 1px solid rgba(255,255,255,0.06); }

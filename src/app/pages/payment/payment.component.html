@@ -1,0 +1,93 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+        <div class="card-header bg-primary text-white p-4">
+          <h3 class="m-0">Payment</h3>
+          <small class="opacity-75">Secure checkout • 256-bit SSL</small>
+        </div>
+
+        <div class="card-body p-4">
+          <form [formGroup]="form" (ngSubmit)="handlePayment()" novalidate>
+            <!-- Card Number -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Card Number</label>
+              <div class="input-group">
+                <span class="input-group-text">💳</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="1234 5678 9012 3456"
+                  formControlName="cardNumber"
+                  maxlength="19"
+                  [ngClass]="{'is-invalid': ('cardNumber')}"
+                />
+              </div>
+              <div class="invalid-feedback">Enter a valid card number (min 12 digits).</div>
+            </div>
+
+            <!-- Name on Card -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Name on Card</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="John M. Doe"
+                formControlName="nameOnCard"
+                [ngClass]="{'is-invalid': ('nameOnCard')}"
+              />
+              <div class="invalid-feedback">Name is required.</div>
+            </div>
+
+            <!-- Expiry + CVV -->
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label class="form-label fw-semibold">Expiry (MM/YY)</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="08/27"
+                  formControlName="expiry"
+                  [ngClass]="{'is-invalid':('expiry')}"
+                />
+                <div class="invalid-feedback">Use MM/YY format.</div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label fw-semibold">CVV</label>
+                <div class="input-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="•••"
+                    formControlName="cvv"
+                    maxlength="4"
+                    [ngClass]="{'is-invalid': ('cvv')}"
+                  />
+                  <span class="input-group-text" title="3 digits on back (AmEx: 4)">🔒</span>
+                  <div class="invalid-feedback">3–4 digits.</div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-4" />
+
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="fw-semibold">Total</div>
+                <div class="text-muted small">Includes taxes & fees</div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg px-4">
+                Pay Now
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card-footer bg-light text-muted small py-3 px-4">
+          By clicking “Pay Now”, you agree to our Terms & Privacy Policy.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

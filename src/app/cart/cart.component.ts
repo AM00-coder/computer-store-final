@@ -3,6 +3,7 @@ import { NgIf, NgFor, JsonPipe } from '@angular/common'; // ✅ Add JsonPipe her
 import { CartService } from 'src/service/cart.service';
 import { Cart } from '@models/cart';
 import { CartItem } from '@models/cartItem';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -14,10 +15,15 @@ import { CartItem } from '@models/cartItem';
 export class CartComponent implements OnInit {
   cart: Cart = new Cart();
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService,private router: Router) {}
+  
+  
 
   ngOnInit(): void {
     this.loadCart();
+      this.cartService.cart$.subscribe(c => this.cart = c);
+  this.cartService.refreshCartFromServer().subscribe(); 
+    
   }
 
   loadCart(): void {
@@ -73,8 +79,12 @@ export class CartComponent implements OnInit {
       this.remove(item.productId);
     }
   }
+  proceedToPayment() {
+  this.router.navigate(['/payment']);
+}
 
   pay() {
     this.cartService.payCart().subscribe(() => this.loadCart());
   }
+  
 }

@@ -1,0 +1,29 @@
+.payment-container {
+  /* subtle background gradient behind the card */
+  background: linear-gradient(180deg, #0d6efd10, transparent);
+  min-height: 100vh;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+}
+
+.card .form-control,
+.card .input-group-text {
+  border-radius: 0.75rem;
+}
+
+.card .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+  border-color: #0d6efd;
+}
+
+.badge {
+  border-radius: 0.6rem;
+  padding: 0.5rem 0.65rem;
+  font-weight: 600;
+}
+
+hr {
+  opacity: 0.25;
+}

@@ -6,7 +6,8 @@ const ProductSchema = new mongoose.Schema({
   image: { type: String, required: true },
   description: { type: String, required: true },
   category: { type: String, required: true },
-  isPopular: { type: Boolean, default: false }
+  isPopular: { type: Boolean, default: false },
+  quantity: { type: Number,required: true, min: 0,}
 }, {
   versionKey: false // no __v
 });

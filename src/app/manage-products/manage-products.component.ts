@@ -39,7 +39,8 @@ export class ManageProductsComponent {
       image: [''], // Image will be set via onImageSelected()
       description: [''],
       category: [''],
-      isPopular: [false]
+      isPopular: [false],
+      quantity: [0, [Validators.required, Validators.min(0)]]
     });
   }
 
@@ -55,6 +56,26 @@ export class ManageProductsComponent {
     this.searchForm.reset();
     this.products = this.productService.getAllProducts();
   }
+ deleteProduct(id: string | undefined): void {
+  if (!id) {
+    console.error("❌ Cannot delete: ID is undefined");
+    return;
+  }
+
+  if (confirm('Are you sure you want to delete this product?')) {
+    this.productService.deleteProduct(id).subscribe({
+      next: () => {
+        alert("✅ Product deleted!");
+        this.products = this.products.filter(p => p._id !== id);
+      },
+      error: (err) => {
+        console.error("❌ Failed to delete product:", err);
+      }
+    });
+  }
+}
+
+
 
   // 🖼️ Handle image upload and convert to Base64
   onImageSelected(event: any) {
@@ -71,7 +92,7 @@ export class ManageProductsComponent {
 
   // ➕ Add product
   submitProduct() {
-  const { name, price, image, description, category, isPopular } = this.productForm.value;
+  const { name, price, image, description, category, isPopular,quantity } = this.productForm.value;
 
   // 💣 If image field is still empty, stop
   if (!image) {
@@ -79,7 +100,7 @@ export class ManageProductsComponent {
     return;
   }
 
-  this.productService.add(name, price, image, description, category, isPopular);
+  this.productService.add(name, price, image, description, category, isPopular,quantity);
 
   setTimeout(() => {
     this.products = this.productService.getAllProducts(); // Refresh list

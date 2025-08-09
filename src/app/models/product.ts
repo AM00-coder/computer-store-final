@@ -6,6 +6,7 @@ export class Product {
   description: string;
   category: string;
   isPopular: boolean;
+  quantity: number;
 
   constructor(
     name: string,
@@ -13,7 +14,8 @@ export class Product {
     image: string,
     description: string,
     category: string,
-    isPopular: boolean
+    isPopular: boolean,
+     quantity: number
   ) {
     this.name = name;
     this.price = price;
@@ -21,5 +23,7 @@ export class Product {
     this.description = description;
     this.category = category;
     this.isPopular = isPopular;
+    this.quantity = quantity;
+
   }
 }
